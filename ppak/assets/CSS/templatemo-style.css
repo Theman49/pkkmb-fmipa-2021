@@ -1,0 +1,244 @@
+body {
+  font-family: 'Kanit', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color:#F6F6F6;
+}
+/* Add a thumb */
+body::-webkit-scrollbar-thumb {
+    background: #F6F6F6;
+}
+
+body, html {
+  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+
+#video-container  {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#video-container video,
+.video-overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#video-container .video-overlay {
+  z-index: 9999;
+  background: #F6F6F6;
+  width: 100%;
+}
+
+#video-container .video-content {
+  z-index: 99999;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#video-container .video-content .inner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.full-screen-portfolio .container-fluid,
+.full-screen-portfolio .col-md-4, .col-md-6 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.grid-portfolio .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media only screen and (max-width: 800px){
+  .grid-portfolio .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 500px){
+  .grid-portfolio .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.portfolio-item img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.portfolio-item .thumb {
+  position: relative;
+}
+
+
+.portfolio-item .hover-effect .hover-content {
+    position: absolute;
+    text-align: left;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+
+.full-screen-portfolio .portfolio-item h1 {
+  position: relative;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+  padding-left: 20px;
+  line-height: 15px;
+  transform: translateY(25px);
+  transition: .5s ease-in-out;
+  letter-spacing: 0.5px;
+ }
+
+ .full-screen-portfolio .portfolio-item em {
+  font-style: normal;
+  font-weight: 200;
+ }
+
+.full-screen-portfolio .portfolio-item:hover h1 {
+  transform: translateY(0);
+ }
+
+ .full-screen-portfolio .portfolio-item {
+ text-align: center;
+ line-height: 150%;
+ text-transform: lowercase;
+ cursor: pointer;
+}
+
+.full-screen-portfolio .portfolio-item:hover p {
+  opacity: 1;
+  transform: translateY(0);
+ }
+
+.portfolio-item .hover-effect .hover-content {
+    position: absolute;
+    text-align: left;
+    width: 100%;
+    bottom: 5px;
+    left: 0;
+}
+
+.archives ul, .categories ul {
+  margin-top: -5px;
+  padding: 0;
+  list-style: none;
+}
+
+.archives ul li, .categories ul li {
+  margin-bottom: 12px; 
+}
+
+.archives ul li:last-child, .categories ul li:last-child {
+  margin-bottom: 0px; 
+}
+
+.archives ul li a, .categories ul li a {
+  font-size: 15px;
+  font-weight: 200;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: all 0.5s;
+}
+
+
+.archives ul li a:hover, .categories ul li a:hover {
+  opacity: 0.5;
+}
+
+.recent-posts ul {
+  padding: 0;
+  list-style: none;
+}
+
+.recent-posts ul li {
+  margin-bottom: 15px;
+}
+
+.recent-posts ul a {
+  text-decoration: none;
+}
+
+.recent-posts ul li img {
+  display: inline-block;
+  max-width: 100%;
+  margin-right: 15px;
+}
+
+.recent-posts ul li .text {
+  display: inline-block;
+}
+
+.recent-posts ul li h6 {
+  margin-bottom: 5px;
+  padding-top: 0px;
+  margin-top: 0px;
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.recent-posts ul li span {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 200;
+  color: #f4dd5b;
+}
+
+
+.latest-gallery ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.latest-gallery ul li {
+  display: inline-block;
+  max-width: 59px;
+  overflow-y: hidden;
+  margin-bottom: 3px;
+  margin-right: 1px;
+}
+
+.latest-gallery ul li:nth-child(4){
+  margin-right: 0px;
+}
+
+.latest-gallery ul li:nth-child(8){
+  margin-right: 0px;
+}
+
+.latest-gallery ul li img {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.latest-gallery ul li img:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
