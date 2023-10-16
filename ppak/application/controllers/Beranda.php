@@ -11,8 +11,8 @@ class Beranda extends CI_Controller {
 
 	public function index()
 	{
-         require $_SERVER['DOCUMENT_ROOT'] . "/vendor/autoload.php";
-
+         //require $_SERVER['DOCUMENT_ROOT'] . "/vendor/autoload.php";
+/*
   $google_client = new Google_Client();
 
   $google_client->setClientId('159925294652-bq4j3u0v7j5jakffcjmfhq1koo08k13b.apps.googleusercontent.com'); //Define your ClientID
@@ -76,10 +76,11 @@ class Beranda extends CI_Controller {
     $data = NULL;
     $this->loggedIn($data);
   }
+*/
   $login_button = '';
   if(!$this->session->userdata('access_token'))
   {
-   $login_button = '<a href="https://pkkmbfmipaunnes.web.id/auth/login" class="masuk"><span>Masuk</span></a>';
+   $login_button = '<a href="https://pkkmbfmipaunnes.cakdeny49.my.id/auth/login" class="masuk"><span>Masuk</span></a>';
    $data['login_button'] = $login_button;
    // $this->load->view('beranda', $data);
    $this->loggedIn($data);
